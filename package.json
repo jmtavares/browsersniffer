@@ -1,6 +1,6 @@
 {
   "name": "browsersniffer",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "banner": "/*\n* <%= pkg.name %> (<%= pkg.version %>)\n* https://github.com/yconoclast/browsersniffer\n* MIT License | Copyright (c) 2015 José Tavares\n*/\n",
   "devDependencies": {
     "grunt": "~0.4.5",
