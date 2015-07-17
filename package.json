@@ -1,5 +1,5 @@
 {
-  "name": "BrowserSniffer",
+  "name": "browsersniffer",
   "version": "0.1.0",
   "banner": "/*\n* <%= pkg.name %> (<%= pkg.version %>)\n* https://github.com/yconoclast/browsersniffer\n* MIT License | Copyright (c) 2015 José Tavares\n*/\n",
   "devDependencies": {
@@ -21,7 +21,7 @@
   },
   "keywords": [
     "browser",
-    "detection",
+    "detection",§
     "sniffer"
   ],
   "author": "Jose Tavares <josetavares00@gmail.com> (http://yconoclast.github.io/)",
