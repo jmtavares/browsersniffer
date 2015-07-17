@@ -6,10 +6,6 @@ You can check in the Bowser Repository the full list of devices supported ([User
 
 ## Install
 
-* `npm install`
-* `grunt`
-
-
 Include the minified version (browsersniffer.min.js) in your page and call this method:
 
 ``` js
