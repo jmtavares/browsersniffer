@@ -10,7 +10,7 @@ You can check in the Bowser Repository the full list of devices supported ([User
 * `grunt`
 
 
-Include the minified version (dist/browsersniffer.min.js) in your page and call this method:
+Include the minified version (browsersniffer.min.js) in your page and call this method:
 
 ``` js
 window.browsersniffer.detect();
