@@ -12,7 +12,6 @@
             firefox: 'Firefox',
             msie: 'Internet Explorer',
             msedge: 'Internet Explorer Edge',
-            android: 'Android Native',
             ios: 'iOS Native',
             opera: 'Opera',
             phantom: 'PhantomJS',
@@ -32,9 +31,9 @@
         return {
             android: 'Android',
             windowsphone: 'Windows Phone',
-            iphone: 'iOS Iphone',
-            ipad: 'iOS Ipad',
-            ipod: 'iOS Ipod',
+            iphone: 'iPhone',
+            ipad: 'iPad',
+            ipod: 'iPod',
             blackberry: 'Blackberry',
             firefoxos: 'Firefox OS',
             webos: 'WebOS',
@@ -68,7 +67,8 @@
         }
 
         browserData.browser = browserDescription;
-        browserData.mobileOperatingSystem = operatingSystemDescription;
+        browserData.mobileOS = operatingSystemDescription;
+        browserData.mobileOSVersion = bowserInstance.osversion;
         browserData.version = bowserInstance.version;
         browserData.bowser = bowserInstance;
 
