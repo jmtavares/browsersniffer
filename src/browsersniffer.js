@@ -1,4 +1,5 @@
 /* global bowser */
+/* global window */
 
 (function (name, global, factory) {
     'use strict';
@@ -43,11 +44,48 @@
         };
     }
 
+    function getNavigatorProperties(browserData) {
+        if (window.navigator) {
+            browserData.language = window.navigator.language;
+            browserData.maxTouchPoints = window.navigator.maxTouchPoints;
+            browserData.javaEnabled = window.navigator.javaEnabled();
+            browserData.onLine = window.navigator.onLine;
+        }
+    }
+
+    function getScreenProperties(browserData) {
+        if (window.screen) {
+            browserData.currentResolution = window.screen.width + "x" + window.screen.height;
+            browserData.colorDepth = window.screen.colorDepth;
+        }
+    }
+
+    function getPerformanceProperties(browserData) {
+        var navigationStart;
+        var timing = {};
+
+        if (window.performance && window.performance.timing) {
+            navigationStart = window.performance.timing.navigationStart;
+
+            for (var i in window.performance.timing) {
+                if (i !== 'navigationStart') {
+                    if (window.performance.timing[i] < navigationStart) {
+                        timing[i] = window.performance.timing[i];
+                    } else {
+                        timing[i] = window.performance.timing[i] - navigationStart;
+                    }
+                }
+            }
+        }
+
+        browserData.timing = timing;
+    }
+
     function detect() {
         var browserDescription = 'Unknown Browser';
         var operatingSystemDescription = 'Unknown Operating System';
         var bowserInstance;
-        var browserData = {};
+        var browserData;
         var browserFlags = getBrowserFlags();
         var mobileOperatingSystem = getMobileOSFlags();
         var flag;
@@ -66,12 +104,17 @@
             }
         }
 
-        browserData.browser = browserDescription;
-        browserData.mobileOS = operatingSystemDescription;
-        browserData.mobileOSVersion = bowserInstance.osversion;
-        browserData.version = bowserInstance.version;
-        browserData.bowser = bowserInstance;
+        browserData = {
+            browser: browserDescription,
+            version: bowserInstance.version,
+            mobileOS: operatingSystemDescription,
+            mobileOSVersion: bowserInstance.osversion,
+            bowser: bowserInstance
+        };
 
+        getNavigatorProperties(browserData);
+        getScreenProperties(browserData);
+        getPerformanceProperties(browserData);
 
         return browserData;
     }
