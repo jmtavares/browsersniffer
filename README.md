@@ -1,7 +1,8 @@
 # Browser Sniffer
 
-Basically this uses [Bowser](https://github.com/ded/bowser) to detect the browser name, browser version and mobile operating system (if possible).
+Browser Sniffer uses [Bowser](https://github.com/ded/bowser) to detect the browser name, browser version and mobile operating system (if possible).
 
+You can check in the Bowser Repository the full list of devices supported ([User Agents](https://github.com/ded/bowser/blob/master/src/useragents.js).
 
 ## Install
 
@@ -9,7 +10,7 @@ Basically this uses [Bowser](https://github.com/ded/bowser) to detect the browse
 * `grunt`
 
 
-Include the minified version in your page and call this method:
+Include the minified version (dist/browsersniffer.min.js) in your page and call this method:
 
 ``` js
 window.browsersniffer.detect();
@@ -18,17 +19,22 @@ window.browsersniffer.detect();
 And it will return an object like this:
 
 ``` json
-"browser" : "Chrome",
-"mobileOperatingSystem" : "Unknown Operating System",
-"version" : "43.0",
-"bowser" : {
-    "name" : "Chrome",
-    "chrome" : true,
-    "version" : "43.0",
-    "webkit" : true,
-    "a":true
-    }
+{
+  "browser": "Android Native",
+  "mobileOperatingSystem": "Android",
+  "version": "4.0",
+  "bowser": {
+    "name": "Android",
+    "version": "4.0",
+    "webkit": true,
+    "android": true,
+    "osversion": "4.0",
+    "mobile": true,
+    "x": true
+  }
 }
 ```
 
 The bowser result is added to this object if you need to check anything else.
+
+
