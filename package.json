@@ -12,5 +12,22 @@
   },
   "dependencies": {
     "bowser": "^0.7.3"
-  }
+  },
+  "description": "Browser Sniffer uses [Bowser](https://github.com/ded/bowser) to detect the browser name, browser version and mobile operating system",
+  "main": "browsersniffer.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yconoclast/browsersniffer.git"
+  },
+  "keywords": [
+    "browser",
+    "detection",
+    "sniffer"
+  ],
+  "author": "Jose Tavares <josetavares00@gmail.com> (http://yconoclast.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yconoclast/browsersniffer/issues"
+  },
+  "homepage": "https://github.com/yconoclast/browsersniffer"
 }

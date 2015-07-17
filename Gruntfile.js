@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                     banner: grunt.file.readJSON('package.json').banner
                 },
                 files: {
-                    'dist/browsersniffer.min.js': [
+                    'browsersniffer.min.js': [
                         'src/*.js',
                         'node_modules/bowser/bowser.min.js'
                     ]
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                     banner: grunt.file.readJSON('package.json').banner
                 },
                 files: {
-                    'dist/browsersniffer.js': [
+                    'browsersniffer.js': [
                         'src/*.js',
                         'node_modules/bowser/bowser.js'
                     ]
