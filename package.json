@@ -1,0 +1,16 @@
+{
+  "name": "BrowserSniffer",
+  "version": "0.1.0",
+  "banner": "/*\n* <%= pkg.name %> (<%= pkg.version %>)\n* https://github.com/yconoclast/browsersniffer\n* MIT License | Copyright (c) 2015 José Tavares\n*/\n",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-eslint": "^16.0.0",
+    "grunt-version-check": "^0.2.1",
+    "load-grunt-tasks": "^3.2.0"
+  },
+  "dependencies": {
+    "bowser": "^0.7.3"
+  }
+}
