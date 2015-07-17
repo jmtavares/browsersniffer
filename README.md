@@ -1,10 +1,12 @@
 # Browser Sniffer
 
-Browser Sniffer uses [Bowser](https://github.com/ded/bowser) to detect the browser name, browser version and mobile operating system (if possible).
-
-You can check in the Bowser Repository the full list of devices supported ([User Agents](https://github.com/ded/bowser/blob/master/src/useragents.js)).
+Browser Sniffer uses [Bowser](https://github.com/ded/bowser) to detect the browser name, browser version and mobile operating system (if possible). You can check in the Bowser Repository the full list of devices supported ([User Agents](https://github.com/ded/bowser/blob/master/src/useragents.js)).
 
 ## Install
+
+``` js
+npm install browsersniffer --save-dev
+```
 
 Include the minified version (browsersniffer.min.js) in your page and call this method:
 
